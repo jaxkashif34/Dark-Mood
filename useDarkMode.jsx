@@ -1,3 +1,9 @@
+these bracket code put inside where you want to toggle dark mood 
+{   
+  import useDarkMode from '../../hooks/useDarkMode';
+  const [darkTheme, setDarkTheme] = useDarkMode();
+  const handleMode = () => setDarkTheme(!darkTheme);
+}
 import { useEffect, useState } from "react";
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
@@ -32,6 +38,3 @@ const useDarkMode = () => {
   return [enabled, setEnabled];
 };
 export default useDarkMode;
-// import useDarkMode from '../../hooks/useDarkMode';
-// const [darkTheme, setDarkTheme] = useDarkMode();
-//   const handleMode = () => setDarkTheme(!darkTheme);
